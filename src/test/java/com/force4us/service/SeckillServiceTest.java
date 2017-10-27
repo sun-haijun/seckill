@@ -5,7 +5,6 @@ import com.force4us.dto.SeckillExecution;
 import com.force4us.entity.Seckill;
 import com.force4us.exception.RepeatKillException;
 import com.force4us.exception.SeckillCloseException;
-import com.force4us.exception.SeckillException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -28,7 +27,7 @@ import static org.junit.Assert.*;
 public class SeckillServiceTest {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    
+
     @Autowired
     private SeckillService seckillService;
 

@@ -15,7 +15,7 @@ public class SuccessKilled {
     private short state;
 
     private Date createTime;
-syst
+
     private Seckill seckill;
 
     public long getSeckillId() {

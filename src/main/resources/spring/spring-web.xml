@@ -27,4 +27,16 @@
 
     <!--4:扫描web相关的controller-->
     <context:component-scan base-package="com.force4us.web"/>
+
+    <!--5:注册拦截器-->
+    <mvc:interceptors>
+        <bean id="needlogin" class="com.force4us.interceptor.NeedLoginInterceptor"></bean>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/seckill/neednlogin"/>
+            <ref bean="needlogin" />
+        </mvc:interceptor>
+
+
+    </mvc:interceptors>
 </beans>
