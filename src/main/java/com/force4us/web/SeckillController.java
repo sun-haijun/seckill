@@ -15,6 +15,7 @@ import org.springframework.test.annotation.Repeat;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.List;
 
@@ -31,14 +32,15 @@ public class SeckillController {
 
 
     @RequestMapping(value = "/list",method= RequestMethod.GET)
-    public String list(Model model) {
+    public String list(Model model,HttpSession httpSession) {
         List<Seckill> list = seckillService.getSeckillList();
         model.addAttribute("list",list);
+        httpSession.setAttribute("demo-session","xiaomage");
         return "list";
     }
 
     @RequestMapping(value = "/{seckillId}/detail",method = RequestMethod.GET)
-    public String detail(@PathVariable("seckillId") Long seckillId, Model model){
+    public String detail(@PathVariable("seckillId") Long seckillId, Model model, HttpSession httpSession){
         if(seckillId == null){
             return "redirect:/seckill/list";
         }
@@ -46,6 +48,9 @@ public class SeckillController {
         if(seckill == null){
             return "forward:/seckill/list";
         }
+        String username = httpSession.getAttribute("demo-session").toString();
+        System.out.println("username="+username);
+
         model.addAttribute("seckill", seckill);
         return "detail";
     }
