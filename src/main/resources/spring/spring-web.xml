@@ -30,13 +30,9 @@
 
     <!--5:注册拦截器-->
     <mvc:interceptors>
-        <bean id="needlogin" class="com.force4us.interceptor.NeedLoginInterceptor"></bean>
-
         <mvc:interceptor>
-            <mvc:mapping path="/seckill/neednlogin"/>
-            <ref bean="needlogin" />
+            <mvc:mapping path="/seckill/**"/>
+            <bean class="com.force4us.interceptor.NeedLoginInterceptor"></bean>
         </mvc:interceptor>
-
-
     </mvc:interceptors>
 </beans>
