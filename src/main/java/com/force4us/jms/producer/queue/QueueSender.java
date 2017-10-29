@@ -9,13 +9,14 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * @Author: 孙海军【haijun.sun@jrj.com.cn】
  * @Date: 2017/10/29
  * @Time: 17:08
  **/
-@Component("queueSender")
+@Service("queueSender")
 public class QueueSender {
 
     @Autowired

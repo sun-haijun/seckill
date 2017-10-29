@@ -1,6 +1,7 @@
 package com.force4us.jms.consumer.topic;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.jms.JMSException;
 import javax.jms.Message;
@@ -12,7 +13,7 @@ import javax.jms.TextMessage;
  * @Date: 2017/10/29
  * @Time: 17:25
  **/
-@Component
+@Service
 public class TopicReceiver2 implements MessageListener{
 
 

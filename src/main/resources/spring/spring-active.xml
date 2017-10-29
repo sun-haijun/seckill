@@ -56,4 +56,19 @@
     </jms:listener-container>
 
     <!-- ====Consumer side end==== -->
+
+
+    <!-- 消息监听器
+    <bean id="consumerMessageListener" class="cn.mayongfa.activemq.ConsumerMessageListener" />
+    <bean id="jmsContainer"
+          class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="connectionFactory" />
+        <property name="destination" ref="queueDestination" />
+        <property name="messageListener" ref="consumerMessageListener" />
+         设置固定的线程数
+        <property name="concurrentConsumers" value="2"></property>
+         设置动态的线程数
+        <property name="concurrency" value="2-5"></property>
+    </bean>
+    -->
 </beans>
