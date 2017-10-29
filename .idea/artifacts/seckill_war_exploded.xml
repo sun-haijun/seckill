@@ -38,6 +38,9 @@
           <element id="library" level="project" name="Maven: com.dyuproject.protostuff:protostuff-api:1.0.8" />
           <element id="library" level="project" name="Maven: com.dyuproject.protostuff:protostuff-runtime:1.0.8" />
           <element id="library" level="project" name="Maven: com.dyuproject.protostuff:protostuff-collectionschema:1.0.8" />
+          <element id="library" level="project" name="Maven: org.apache.activemq:activemq-all:5.13.2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jms:4.1.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-messaging:4.1.7.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">
